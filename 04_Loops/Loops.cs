@@ -76,5 +76,28 @@ namespace _04_Loops
                 Console.WriteLine(i);
             }
         }
+        [TestMethod]
+        public void MorningChallenge1()
+        {
+            string str = "Supercalifragilisticexpialidocious";
+            
+            foreach (char letter in str)
+            {
+                if (letter == 'i')
+                {
+                    Console.WriteLine(letter);
+                }
+                else if (letter == 'l')
+                {
+                    Console.WriteLine(letter);
+                }
+                else
+                {
+                    Console.WriteLine("Not an i.");
+                }
+            }
+            Console.WriteLine(str + " has " + str.Length + " letters");
+
+        }
     }
 }
