@@ -1,4 +1,5 @@
 ﻿using _05_Classes.Classes;
+using _06_Inheritance.People;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -13,7 +14,8 @@ namespace _05_Classes.Classes
             Person person = new Person();
             person.FirstName = "Ross";
             person.LastName = "Denman";
-            Console.WriteLine($"{person.FirstName} {person.LastName}");
+            person.DateOfBirth = new DateTime(1975, 1, 9);
+            Console.WriteLine($"{person.FirstName} {person.LastName} {person.Age}");
 
             Console.WriteLine(person.FullName);
 
@@ -21,7 +23,16 @@ namespace _05_Classes.Classes
                 "Ashely",
                 "Lawrence",
                 new DateTime(1989, 4, 26),
-                new Vehicle());
+                new Vehicle("Chevy", "Malibu", VehicleType.Car));
+        }
+        [TestMethod]
+        public void IdTest()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                User user = new User("dsfh");
+                Console.WriteLine(user.ID);
+            }
         }
     }
 }

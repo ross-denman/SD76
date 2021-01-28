@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9E4838C5-1276-486A-989F-85A159DC80E9}</ProjectGuid>
+    <ProjectGuid>{59A9D720-374B-4E13-808E-AA59DD0C8CFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_05_Classes</RootNamespace>
-    <AssemblyName>05_Classes</AssemblyName>
+    <RootNamespace>_06_InheritenceClasses</RootNamespace>
+    <AssemblyName>06_InheritenceClasses</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,25 +49,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Calculator.cs" />
-    <Compile Include="Classes\Greeter.cs" />
-    <Compile Include="Classes\Person.cs" />
-    <Compile Include="Classes\Room.cs" />
-    <Compile Include="Tests\PersonTests.cs" />
-    <Compile Include="Classes\Vehicle.cs" />
+    <Compile Include="People\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\GreeterTests.cs" />
-    <Compile Include="Tests\RoomTests.cs" />
-    <Compile Include="Tests\VehicleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\06_InheritenceClasses\06_Inheritance.csproj">
-      <Project>{59a9d720-374b-4e13-808e-aa59dd0c8cfb}</Project>
-      <Name>06_Inheritance</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

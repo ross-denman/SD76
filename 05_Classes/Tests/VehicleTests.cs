@@ -10,7 +10,7 @@ namespace _05_Classes.Tests
         [TestMethod]
         public void Properties()
         {
-            Vehicle firstVehicle = new Vehicle();
+            Vehicle firstVehicle = new Vehicle("Honda", "Civic", VehicleType.Car);
             firstVehicle.Make = "Honda";
 
             Console.WriteLine(firstVehicle.Make);
@@ -23,7 +23,7 @@ namespace _05_Classes.Tests
         public void Methods()
         {
             
-            Vehicle myCar = new Vehicle();
+            Vehicle myCar = new Vehicle("Honda", "Civic", VehicleType.Car);
             Console.WriteLine(myCar.IsRunning);
             myCar.TurnOn();
             Console.WriteLine(myCar.IsRunning);
