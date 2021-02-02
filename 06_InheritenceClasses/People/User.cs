@@ -8,12 +8,13 @@ namespace _06_Inheritance.People
 {
     public class User
     {
+        // Fields (private) for class
         private string _firstName;
         private string _lastName;
 
         public string ID { get; }
         public string PhoneNumber { get; set; }
-        public string Email { get; set; }
+        public string Email { get; }
         public string Name
         {
             get
@@ -31,17 +32,32 @@ namespace _06_Inheritance.People
                 // If !isWeekend, work!!
             }
         }
-        public User(string email)
+
+        //Constructor
+        public User(string email, string userName)
         {
             Email = email;
-            ID = GenerateID();
             // setter not needed because this is the constructor
+            ID = GenerateID();
             // Create a method that will generate a RANDOM ID
             // 16 UPPERCASE letters and numbers
             // Cannot include the letter 'X'
             // Also cannot include vowels
             // Must include at least one number
             // and implement it
+
+
+            // static methods apply to the WHOLE CLASS, not any particular member
+            
+            // called form the class directly
+            Console.WriteLine("d");
+            Convert.ToInt32("42");
+
+            // instance methods apply to a PARTICULAR INSTANCE of a class
+            // examples:
+            Random random = new Random();
+            random.Next(0, 5);
+            // user.SetLastName();
         }
         public static string GenerateID()
         {

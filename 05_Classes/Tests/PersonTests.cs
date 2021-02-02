@@ -3,7 +3,7 @@ using _06_Inheritance.People;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace _05_Classes.Classes
+namespace _05_Classes.Tests
 {
     [TestClass]
     public class PersonTests
@@ -12,25 +12,31 @@ namespace _05_Classes.Classes
         public void NameTest()
         {
             Person person = new Person();
-            person.FirstName = "Ross";
-            person.LastName = "Denman";
-            person.DateOfBirth = new DateTime(1975, 1, 9);
-            Console.WriteLine($"{person.FirstName} {person.LastName} {person.Age}");
+            person.FirstName = "Andrew";
+            person.LastName = "Torr";
+            person.DateOfBirth = new DateTime(1985, 9, 22);
+            Console.WriteLine($"{person.FirstName} {person.LastName}, age {person.Age}");
 
             Console.WriteLine(person.FullName);
 
             Person otherPerson = new Person(
-                "Ashely",
+                "Ashley",
                 "Lawrence",
                 new DateTime(1989, 4, 26),
-                new Vehicle("Chevy", "Malibu", VehicleType.Car));
+                new Vehicle("Chevy", "Malibu", VehicleType.Car)
+            );
+
+            Console.WriteLine(otherPerson.FullName);
+            Console.WriteLine("make: " + otherPerson.Vehicle.Make);
+            // otherPerson.FirstName = "Ash";
         }
+
         [TestMethod]
         public void IdTest()
         {
             for (int i = 0; i < 10; i++)
             {
-                User user = new User("dsfh");
+                User user = new User("ross@gmail.com", "dsfh");
                 Console.WriteLine(user.ID);
             }
         }
